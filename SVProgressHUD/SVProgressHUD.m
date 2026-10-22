@@ -158,12 +158,10 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 #else
      NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
 #endif
-     /*NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
-     if (!url) {
-         return nil;
-     }
-     return [NSBundle bundleWithURL:url];*/
-	 return bundle;
+     NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
+     if (!url) return nil;
+     return [NSBundle bundleWithURL:url];
+	 //return bundle;
  }
 
 #pragma mark - Setters
