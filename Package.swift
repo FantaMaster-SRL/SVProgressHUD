@@ -21,7 +21,7 @@ let package = Package(
             path: "SVProgressHUD",
             exclude: ["SVProgressHUD-Prefix.pch"],
             resources: [
-                .copy("SVProgressHUD.bundle"),
+                .process("SVProgressHUD.bundle"),
                 .copy("PrivacyInfo.xcprivacy")
             ],
             publicHeadersPath: "include"
